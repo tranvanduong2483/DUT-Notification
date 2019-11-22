@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/ln_thongbao"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg_daxem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_tieude"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ff0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="04/10/2019:  Đổi thời khóa biểu nửa sau học kỳ 1/2019-2020; Tạm ngừng website ngày 06/10/2019"
+            android:textSize="@dimen/sizeTB" />
+
+        <TextView
+            android:id="@+id/tv_noidungtb"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#585555"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="- Đổi thời khóa biểu nửa sau học kỳ 1/2019-2020: Chi tiết thông báo tại đây;
+- Tạm ngừng website: Nhà trường tạm ngừng các website http://cb.dut.udn.vn, http://sv.dut.udn.vn, http://fb.dut.udn.vn để nâng cấp máy chủ. Thời gian ngừng dự kiến: từ 0h đến 18h ngày 06/10/2019."
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
