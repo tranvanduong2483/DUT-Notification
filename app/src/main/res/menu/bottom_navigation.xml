@@ -13,5 +13,9 @@
         android:id="@+id/nav_teacher"
         android:icon="@drawable/ic_supervisor_account_black_24dp"
         android:title="Thầy Cô" />
+    <item
+        android:id="@+id/nav_schedule"
+        android:icon="@drawable/ic_time"
+        android:title="Lịch học" />
 
 </menu>

@@ -103,7 +103,6 @@ public  class AsyncTask_Login extends AsyncTask<String, String, String> {
         }finally {
             mPg_login.setVisibility(ProgressBar.GONE);
             btn_login.setVisibility(Button.VISIBLE);
-
         }
         super.onPostExecute(s);
     }

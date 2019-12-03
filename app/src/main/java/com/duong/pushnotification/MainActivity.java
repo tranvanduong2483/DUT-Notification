@@ -8,21 +8,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bottomNav;
     SessionManager sessionManager;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
 
         sessionManager = new SessionManager(this);
         sessionManager.checkLogin();
@@ -34,9 +29,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 .beginTransaction()
                 .replace(R.id.fragment_container, new PersonalFragment())
                 .commit();
-
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -52,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
             case R.id.nav_teacher:
                 selectedFragment = new TeacherFragment();
+                break;
+            case R.id.nav_schedule:
+                selectedFragment = new ScheduleFragment();
                 break;
         }
 

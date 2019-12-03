@@ -69,46 +69,46 @@ public class UniversityFragment extends Fragment {
 
         mData.child(MSSV).child(Notification.THONG_BAO_CHUNG)
                 .addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull  DataSnapshot dataSnapshot) {
-                list_thongbao.clear();
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                   Notification tb =postSnapshot.getValue(Notification.class);
-                    list_thongbao.add(tb);
-                }
-
-                if (list_thongbao.size()==0) return;
-
-                // Sorting
-                Collections.sort(list_thongbao, new Comparator<Notification>() {
                     @Override
-                    public int compare(Notification notification1, Notification notification2)
-                    {
+                    public void onDataChange(@NonNull  DataSnapshot dataSnapshot) {
+                        list_thongbao.clear();
+                        for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                            Notification tb =postSnapshot.getValue(Notification.class);
+                            list_thongbao.add(tb);
+                        }
 
-                        String s = "<p class=\"MsoNormal\"><b><span style=\"font-size:13.0pt;line-height:80%;font-family:times new roman,serif;color:red\">";
-                        String a = notification1.title.subSequence(s.length(), s.length()+10) +"";
-                        String[] tmp = a.split("/");
-                        a= tmp[2]+"/"+ tmp[1]+"/"+tmp[0];
+                        if (list_thongbao.size()==0) return;
 
-                        String b = notification2.title.subSequence(s.length(), s.length()+10) +"";
-                        String[] tmp2 = b.split("/");
-                        b= tmp2[2]+"/"+ tmp2[1]+"/"+tmp2[0];
-                        return  b.compareTo(a);
+                        // Sorting
+                        Collections.sort(list_thongbao, new Comparator<Notification>() {
+                            @Override
+                            public int compare(Notification notification1, Notification notification2)
+                            {
+
+                                String s = "<p class=\"MsoNormal\"><b><span style=\"font-size:13.0pt;line-height:80%;font-family:times new roman,serif;color:red\">";
+                                String a = notification1.title.subSequence(s.length(), s.length()+10) +"";
+                                String[] tmp = a.split("/");
+                                a= tmp[2]+"/"+ tmp[1]+"/"+tmp[0];
+
+                                String b = notification2.title.subSequence(s.length(), s.length()+10) +"";
+                                String[] tmp2 = b.split("/");
+                                b= tmp2[2]+"/"+ tmp2[1]+"/"+tmp2[0];
+                                return  b.compareTo(a);
+                            }
+                        });
+
+                        thongBaoAdapter.notifyDataSetChanged();
+                        mListView.setVisibility(ListView.VISIBLE);
+                        relativeLayoutProgress.setVisibility(ProgressBar.GONE);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
                     }
                 });
 
-                thongBaoAdapter.notifyDataSetChanged();
-                mListView.setVisibility(ListView.VISIBLE);
-                relativeLayoutProgress.setVisibility(ProgressBar.GONE);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-
         ActionBar actionBar =  ((AppCompatActivity)getActivity()).getSupportActionBar();
         actionBar.setTitle("Thông báo chung"); //Thiết lập tiêu đề nếu muốn
-    return  view;
+        return  view;
     }
 }
