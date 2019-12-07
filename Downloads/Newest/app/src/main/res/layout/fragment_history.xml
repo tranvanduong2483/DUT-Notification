@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8EAF6"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:background="#283593"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dodai20"
+            android:layout_marginTop="@dimen/dodai20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Dashboard"
+                android:textColor="#ffffff"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 items"
+                android:textColor="#5C6BC0"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/dodai80"
+            android:layout_height="@dimen/dodai80"
+            android:layout_marginTop="@dimen/dodai20"
+            android:layout_marginLeft="100dp"
+            android:src="@drawable/logo_circle">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_myhistory"
+            style="@style/loginButton4"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dodai10"
+            android:text="Lịch sử của tôi"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_allhistory"
+            style="@style/loginButton4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:padding="@dimen/dodai10"
+            android:text="Toàn bộ"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/dodai20"
+            android:layout_marginLeft="@dimen/dodai20"/>
+
+        <Button
+            android:id="@+id/btn_refesh"
+            style="@style/loginButton4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dodai10"
+            android:text="Làm mới"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/tv_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tìm kiếm cuộc thảo luận"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_id"
+        android:layout_marginTop="-180dp" />
+
+</RelativeLayout>

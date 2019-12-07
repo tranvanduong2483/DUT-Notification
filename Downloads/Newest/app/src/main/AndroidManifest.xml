@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.duong.anyquestion">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:label="Nạp tiền"
+            android:name=".NapTienActivity"></activity>
+        <activity
+            android:name=".RutTienActivity"
+            android:label="Rút tiền" />
+        <activity
+            android:label="Tìm mật khẩu"
+            android:name=".ForgetPasswordctivity" />
+        <activity
+            android:label="Bảo mật tài khoản"
+            android:name=".SecurityActivity" />
+        <activity
+            android:label="Cuộc thảo luận"
+            android:name=".MessageHistoryActivity" />
+        <activity
+            android:name=".DetailQuestionActivity"
+            android:label="Chi tiết câu hỏi" />
+        <activity
+            android:label="Phản hồi"
+            android:name=".RatingForExpertActivity" />
+        <activity
+            android:label="Đổi mật khẩu"
+            android:name=".ChangePasswordActivity" />
+        <activity
+            android:label="Cập nhật thông tin"
+            android:name=".EditInfomationActivity" />
+        <activity
+            android:name=".MessageListActivity"
+            android:label="Cuộc thảo luận" />
+        <activity
+            android:name=".LoadingSearchExpertActivity"
+            android:label="Tìm chuyên gia" />
+        <activity
+            android:label="Đăng ký chuyên gia"
+            android:name=".register.ExpertRegisterActivity" />
+        <activity
+            android:name=".ui_expert.ExpertMainActivity"
+            android:label="@string/title_activity_expert_main"
+            android:launchMode="singleTop"
+            android:theme="@style/generalnotitle3" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui_user.UserMainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/generalnotitle" />
+        <activity
+            android:name=".register.UserRegisterActivity"
+            android:label="Đăng ký" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="Đăng nhập"
+            android:theme="@style/generalnotitle2" />
+    </application>
+
+</manifest>

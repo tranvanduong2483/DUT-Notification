@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/dodai5">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#512DA8"
+        android:padding="@dimen/dodai10">
+
+        <ImageView
+            android:id="@+id/iv_huyhieu"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/top1st" />
+
+        <TextView
+            android:id="@+id/tv_thuhang"
+            style="@style/expertRatingNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/rounded_rectangle_orange"
+            android:padding="10dp"
+            android:text=" 1 "
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp"
+            android:layout_marginTop="@dimen/dodai5"
+            android:layout_marginBottom="@dimen/dodai5">
+
+            <ImageView
+                android:id="@+id/image_message_profile"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+
+                android:src="@drawable/ic_user" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/dodai20"
+                android:layout_toRightOf="@id/image_message_profile"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    style="@style/nameExpertRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/image_message_profile"
+                    android:maxWidth="300dp"
+                    android:maxLines="1"
+                    android:text="Tran Van Duong" />
+
+                <RatingBar
+                    android:id="@+id/rb_star"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:progressTint="#FFEE58"
+                    android:rating="5"
+                    android:stepSize="1"
+                    android:theme="@style/RatingBar" />
+
+
+                <TextView
+                    android:id="@+id/tv_thaoluan"
+                    style="@style/discussionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cuộc thảo luận"></TextView>
+
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/tv_thuhang"-->
+                <!--                    style="@style/expertRatingNumber"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_below="@id/tv_account"-->
+                <!--                    android:layout_marginTop="@dimen/dodai5"-->
+                <!--                    android:layout_toRightOf="@id/image_message_profile"-->
+                <!--                    android:background="@drawable/rounded_rectangle_orange"-->
+                <!--                    android:padding="8dp"-->
+                <!--                    android:text=" 1 "-->
+                <!--                    android:visibility="visible" />-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+
+                    <!--                    <RatingBar-->
+                    <!--                        android:id="@+id/rb_star"-->
+                    <!--                        style="?android:attr/ratingBarStyleSmall"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_below="@+id/tv_thaoluan"-->
+                    <!--                        android:numStars="5"-->
+                    <!--                        android:paddingTop="5dp"-->
+                    <!--                        android:paddingBottom="5dp"-->
+                    <!--                        android:rating="5"-->
+                    <!--                        android:visibility="gone" />-->
+
+                    <TextView
+                        android:id="@+id/tv_field"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:maxWidth="180dp"
+                        android:maxLines="1"
+                        android:text="Công nghệ thông tin 111111111111111111111111"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad1">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dodai20"
+        android:layout_marginTop="@dimen/dodai30"
+        android:background="@drawable/logo2" />
+
+    <Switch
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:text="Sẵn sàng nhận câu hỏi "
+        android:id="@+id/sw_expert_ready"
+        android:layout_width="300dp"
+        android:layout_height="@dimen/dodai40"
+        android:checked="false"
+        android:fontFamily="@font/robotomedium"
+        android:textColor="#142e54" />
+    <EditText
+        android:id="@+id/edt_keywords"
+        android:hint="Những từ khóa liên quan hết lĩnh vực của bạn"
+        android:layout_marginTop="@dimen/dodai20"
+        android:background="@drawable/text_vien"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/dodai10"
+        android:layout_height="@dimen/dodai60"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="#142e54"
+        android:textColorHint="#142e54" />
+    <EditText
+        android:id="@+id/edt_gioithieu"
+        android:hint="Tin nhắn giới thiệu mở đầu"
+        android:layout_marginTop="@dimen/dodai20"
+        android:background="@drawable/text_vien"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/dodai10"
+        android:layout_height="@dimen/dodai60"
+        android:fontFamily="@font/robotoregular"
+        android:textColor="#142e54"
+        android:textColorHint="#142e54" />
+
+    <TextView
+        android:id="@+id/tv_note"
+        android:hint="Nếu bạn rãnh hãy bấm sẳn sàng"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

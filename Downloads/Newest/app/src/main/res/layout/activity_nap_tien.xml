@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bk_color"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="10dp"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Nạp tiền thật dễ dàng"
+                android:textColor="@color/colorPrimary" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/any_question_card" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="#E1F5FE"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout style="@style/parent">
+
+                    <EditText
+                        android:id="@+id/edt_serial"
+                        style="@style/modifiedEditText"
+                        android:layout_margin="10dp"
+                        android:hint="Nhập số serial"
+                        android:textAllCaps="true"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputName"
+                    style="@style/parent">
+
+                    <EditText
+                        android:id="@+id/edt_ma_the"
+                        style="@style/modifiedEditText"
+                        android:layout_margin="10dp"
+                        android:hint="Nhập mã thẻ"
+                        android:textAllCaps="true"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <Button
+                        android:id="@+id/btn_nap_tien"
+                        style="@style/loginButton1"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Nạp tiền" />
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="@style/loginButton1"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="35dp"
+                        android:text="Cancel" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

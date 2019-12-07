@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_accountuser"
+            android:orientation="vertical">
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Trần Văn Dương"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông tin cá nhân"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+
+                <ImageView
+                    android:id="@+id/nameImageView"
+                    style="@style/profileDetailsImage"
+                    android:src="@drawable/ic_name" />
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    style="@style/profileDetailsTextMain"
+                    android:layout_toRightOf="@id/nameImageView"
+                    android:text="Email" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_below="@id/nameTextView"
+                    android:layout_toRightOf="@id/nameImageView"
+                    android:text="tranvanduong2483@gmail.com" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+
+                <ImageView
+                    android:id="@+id/mobileImageView"
+                    style="@style/profileDetailsImage"
+                    android:src="@drawable/ic_mobile" />
+
+                <TextView
+                    android:id="@+id/phoneTextView"
+                    style="@style/profileDetailsTextMain"
+                    android:layout_toRightOf="@id/mobileImageView"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    style="@style/profileDetailsMiniText"
+                    android:layout_below="@id/phoneTextView"
+                    android:layout_toRightOf="@id/mobileImageView"
+                    android:text="71 Đồng Kè, Hòa Khánh, Liên Chiểu, Đà Nẵng" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                style="@style/profileDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/emailImageView"
+                        style="@style/profileDetailsImage"
+                        android:src="@drawable/ic_emails" />
+
+                    <TextView
+                        android:id="@+id/moneyImageView"
+                        style="@style/profileDetailsTextMain"
+                        android:layout_toRightOf="@id/emailImageView"
+                        android:text="Money in Account" />
+
+                    <TextView
+                        android:id="@+id/tv_money"
+                        style="@style/profileDetailsMiniText"
+                        android:layout_below="@id/moneyImageView"
+                        android:layout_toRightOf="@id/emailImageView"
+                        android:text="Số tiền dư: 100.000 VNĐ" />
+
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/btn_nap_tien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:text="  Nạp tiền"
+                    android:drawableLeft="@drawable/ic_add_money" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/id_daybutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/btn_edit"
+                style="@style/loginButton2"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Sửa" />
+
+            <Button
+                android:id="@+id/btn_change_password"
+                style="@style/loginButton2"
+                android:layout_width="135dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="@dimen/dodai20"
+                android:layout_marginRight="@dimen/dodai20"
+                android:text="Đổi mật khẩu" />
+
+            <Button
+                android:id="@+id/btn_security"
+                style="@style/loginButton2"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal"
+                android:text="Bảo mật" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_dangxuat"
+            style="@style/loginButton2"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="Thoát" />
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+

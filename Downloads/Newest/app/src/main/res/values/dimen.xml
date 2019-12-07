@@ -1,0 +1,42 @@
+<resources>
+    <dimen name="dodai5">5dp</dimen>
+    <dimen name="dodai10">10dp</dimen>
+    <dimen name="dodai15">15dp</dimen>
+    <dimen name="dodai20">20dp</dimen>
+    <dimen name="dodai25">25dp</dimen>
+    <dimen name="dodai35">35dp</dimen>
+    <dimen name="dodai40">40dp</dimen>
+    <dimen name="dodai45">45dp</dimen>
+    <dimen name="dodai50">50dp</dimen>
+    <dimen name="dodai55">55dp</dimen>
+    <dimen name="dodai60">60dp</dimen>
+    <dimen name="dodai70">70dp</dimen>
+    <dimen name="dodai80">80dp</dimen>
+    <dimen name="dodai100">100dp</dimen>
+    <dimen name="dodai115">115dp</dimen>
+    <dimen name="dodai120">120dp</dimen>
+    <dimen name="dodai130">130dp</dimen>
+    <dimen name="dodai150">150dp</dimen>
+    <dimen name="dodai170">170dp</dimen>
+    <dimen name="dodai200">200dp</dimen>
+    <dimen name="dodai350">350dp</dimen>
+
+    <dimen name="cochu15">15sp</dimen>
+    <dimen name="cochu50">50sp</dimen>
+    <dimen name="cochu40">40sp</dimen>
+    <dimen name="cochu20">20sp</dimen>
+
+
+    <dimen name="loginCardRadius">20dp</dimen>
+
+    <dimen name="headerTextSize">28sp</dimen>
+    <dimen name="newsMoreTextSize">18sp</dimen>
+    <dimen name="newsMoreTextSize1">12sp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+
+    <dimen name="dodai30">30dp</dimen>
+    <dimen name="test_120dp_no_delete">240dp</dimen>
+    <dimen name="nameExpertRatingTextSize">22dp</dimen>
+    <dimen name="expertRatingNumberTextSize">22dp</dimen>
+    <dimen name="discussionTextSize">18dp</dimen>
+</resources>

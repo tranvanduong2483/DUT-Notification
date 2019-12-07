@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/login_bk_color"
+    android:orientation="vertical">
+
+    <!--    <TextView-->
+    <!--        android:paddingTop="20dp"-->
+    <!--        android:paddingStart="5dp"-->
+    <!--        android:paddingEnd="5dp"-->
+    <!--        android:textSize="20dp"-->
+    <!--        android:textAllCaps="true"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:text="Những chuyên gia xuất sắc nhất"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F5F5F5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dodai200"
+            android:src="@drawable/list_rating_bg"></ImageView>
+
+        <TextView
+            style="@style/thankYouRatingExpert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dodai10"
+            android:layout_marginBottom="@dimen/dodai20"
+            android:text="Thanks for your contributions">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_list_bxh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/dodai20"
+        android:paddingRight="@dimen/dodai20"
+        android:paddingBottom="@dimen/dodai20"/>
+</LinearLayout>

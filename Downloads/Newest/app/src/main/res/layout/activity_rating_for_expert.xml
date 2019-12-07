@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".RatingForExpertActivity">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logo2" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="Bạn có hài lòng về cuộc thảo luận này không?"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <RatingBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/rb_danhgia"
+        android:rating="5"
+        android:numStars="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:id="@+id/tvRatingScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Awesome. I love it"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edt_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="4"
+        android:hint="Nhập cảm nhận của bạn"
+        android:inputType="textMultiLine" />
+
+    <CheckBox
+        android:text="Gửi dưới dạng khiếu nại"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#F44336"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#e57373"
+        android:text="Gửi phản hồi"
+        android:textColor="@android:color/white" />
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#e57373"
+        android:text="Hủy bỏ"
+        app:strokeColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

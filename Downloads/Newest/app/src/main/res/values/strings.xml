@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Any Question</string>
+    <string name="name1">Subject</string>
+    <string name="math">Math</string>
+    <string name="van">Literature</string>
+    <string name="ysl">Yếu sinh lý</string>
+    <string name="phy">Physical</string>
+    <string name="name2">Question Level</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="qformat">Question Format</string>
+    <string name="all">I don\'t know all</string>
+    <string name="littlebit">I know a little bit</string>
+    <string name="solution">Check my solution</string>
+    <string name="other">Other</string>
+    <string name="image">Image about study</string>
+    <string name="history">My History:</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Cá nhân</string>
+    <string name="title_dashboard">Tìm chuyên gia</string>
+    <string name="title_notifications">Lịch sử</string>
+    <string name="title_activity_expert_main">ExpertMainActivity</string>
+</resources>

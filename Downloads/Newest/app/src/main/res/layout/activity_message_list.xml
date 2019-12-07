@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    tools:context=".MessageListActivity">
+
+    <!-- A horizontal line between the chatbox and RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reyclerview_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="74dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="0dp"
+        android:background="#dfdfdf"
+        android:layout_above="@+id/layout_chatbox"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <LinearLayout
+
+        android:id="@+id/layout_chatbox"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:minHeight="55dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <ImageButton
+            android:id="@+id/btn_camera"
+            android:layout_marginStart="60dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_camera_24dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+        <ImageButton
+            android:id="@+id/btn_picture"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+
+
+        <EditText
+            android:id="@+id/edt_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Viết tin nhắn"
+            android:maxLines="3" />
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/ic_send"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/shadowView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2FFFFFF"
+        android:visibility="gone" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/floatingMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="-5dp"
+        app:fab_labelsPosition="right"
+        android:layout_alignParentBottom="true"
+        app:fab_addButtonStrokeVisible="true"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonColorPressed="@color/colorPrimaryDark"
+        app:fab_addButtonPlusIconColor="@color/white"
+        app:fab_addButtonSize="mini"
+        app:fab_labelStyle="@style/custom_fab">
+
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/whitedark"
+            app:fab_icon="@drawable/ic_question"
+            app:fab_size="mini"
+            app:fab_title="Xem câu hỏi" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/whitedark"
+            app:fab_icon="@drawable/ic_report_black_24dp"
+            app:fab_size="mini"
+            app:fab_title="Gửi khiếu nại" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/whitedark"
+            app:fab_icon="@drawable/ic_close"
+            app:fab_size="mini"
+            app:fab_title="Kết thúc" />
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>
