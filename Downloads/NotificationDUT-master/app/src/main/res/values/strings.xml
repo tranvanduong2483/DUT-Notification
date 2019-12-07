@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="register">REGISTER</string>
+    <string name="login_user_hint">Mã sinh viên</string>
+    <string name="login_password_hint">Mật khẩu</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Gửi phản hồi về ứng dụng</string>
+
+
+
+
+    <string name="URL">http://thongbaodut.000webhostapp.com</string>
+
+</resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:background="@drawable/bg_accountuser"
+
+
+    tools:context=".EditInfomationActivity">
+
+    <RelativeLayout
+        android:id="@+id/linearlayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/im_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/im_avatar"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_chonanhtuthuvien"
+                style="@style/loginButton2"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:text="Chọn" />
+
+            <Button
+                android:id="@+id/btn_chupanh"
+                style="@style/loginButton2"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dodai10"
+                android:text="Chụp mới" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#E1F5FE"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputName"
+                style="@style/parent">
+
+                <EditText
+                    android:id="@+id/edt_fullname"
+                    style="@style/modifiedEditText"
+                    android:layout_margin="5dp"
+                    android:hint="Change your name"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail2"
+                style="@style/parent">
+
+                <EditText
+                    android:id="@+id/edt_email"
+                    style="@style/modifiedEditText"
+                    android:layout_margin="5dp"
+                    android:hint="Change your gmail"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/parent">
+
+                <EditText
+                    android:id="@+id/edt_address"
+                    style="@style/modifiedEditText"
+                    android:layout_margin="5dp"
+                    android:hint="Change your address"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/loginButton2"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/loginButton2"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Save" />
+
+
+    </LinearLayout>
+</LinearLayout>
