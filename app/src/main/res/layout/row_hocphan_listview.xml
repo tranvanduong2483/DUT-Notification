@@ -1,41 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
-    <LinearLayout
-        android:weightSum="4"
-        android:layout_margin="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/loginCard"
+        android:background="@color/whiteCardColor"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="@dimen/loginCardRadius">
 
-        <TextView
-            android:id="@+id/tv_tenhocphan"
-            android:layout_weight="2"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAllCaps="true"
-            android:textStyle="bold"
-            android:text="Công nghệ di động" />
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/tv_lichhoc"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Thứ 5: 1-3,B209" />
+            <TextView
+                android:id="@+id/tv_tenhocphan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Công nghệ di động"
+                android:textAllCaps="true"
+                android:textColor="#3F51B5"
+                android:textSize="24dp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_tuanhoc"
-            android:layout_marginStart="10dp"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Tuần 3-16" />
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:text="Nguyễn Thanh Bình"
+                android:textColor="#757575"
+                android:textSize="18dp"
+                android:textStyle="bold">
 
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/loginCard"
+                    android:layout_weight="1"
+                    android:background="@color/whiteCardColor"
+                    android:elevation="5dp"
+                    app:cardBackgroundColor="#E8EAF6"
+                    app:cardCornerRadius="@dimen/loginCardRadius"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/attributeScheduleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Số tín chỉ">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:text="3"
+                            style="@style/detailScheduleText"
+                            />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    style="@style/loginCard"
+                    android:layout_weight="1"
+                    android:background="@color/whiteCardColor"
+                    android:elevation="5dp"
+                    app:cardBackgroundColor="#E8EAF6"
+                    app:cardCornerRadius="@dimen/loginCardRadius">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            style="@style/attributeScheduleText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tuần học">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tv_tuanhoc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            style="@style/detailScheduleText"
+                            android:text="3-16" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                style="@style/loginCard"
+                android:layout_weight="1"
+                android:background="@color/whiteCardColor"
+                android:elevation="5dp"
+                app:cardBackgroundColor="#E8EAF6"
+                app:cardCornerRadius="@dimen/loginCardRadius"
+                android:layout_marginTop="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/attributeScheduleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lịch học">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/tv_lichhoc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Thứ 5: 1-3,B209"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        style="@style/detailScheduleText"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
