@@ -79,6 +79,15 @@
 
 
 
+    <style name="attributeScheduleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#3F51B5</item>
+    </style>
 
 
+    <style name="detailScheduleText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#3F51B5</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
