@@ -28,8 +28,10 @@
         </activity>
 
 
-        <activity android:name=".DetailNotificationActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:label="Chi tiết thông báo"
+            android:name=".DetailNotificationActivity"></activity>
+        <activity android:name=".Fragment.MainActivity"></activity>
 
         <service
             android:name=".MyFirebaseMessagingService"
@@ -40,7 +42,9 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".LoginActivity" />
+        <activity
+            android:theme="@style/notitle"
+            android:name=".LoginActivity" />
     </application>
 
 </manifest>

@@ -1,14 +1,14 @@
-package com.duong.pushnotification;
+package com.duong.pushnotification.Adapters;
 
 import android.content.Context;
-import android.os.Build;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.duong.pushnotification.R;
+import com.duong.pushnotification.classes.HocPhan;
 
 import java.util.ArrayList;
 
@@ -18,9 +18,9 @@ public class LichHocAdapter extends BaseAdapter {
     private ArrayList<HocPhan> list_hocphan;
 
 
-    public LichHocAdapter(Context context, int layout, ArrayList<HocPhan> list_hocphan){
+    public LichHocAdapter(Context context, int layout, ArrayList<HocPhan> list_hocphan) {
         this.context = context;
-        this.layout=layout;
+        this.layout = layout;
         this.list_hocphan = list_hocphan;
     }
 
@@ -43,19 +43,20 @@ public class LichHocAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
-        View inflater = layoutInflater.inflate(layout,null,false);
+        View inflater = layoutInflater.inflate(layout, null, false);
         TextView tv_tenhocphan = inflater.findViewById(R.id.tv_tenhocphan);
         TextView tv_lichhoc = inflater.findViewById(R.id.tv_lichhoc);
-        TextView tv_tuanhoc =inflater.findViewById(R.id.tv_tuanhoc);
+        TextView tv_tuanhoc = inflater.findViewById(R.id.tv_tuanhoc);
+        TextView tv_giangvien = inflater.findViewById(R.id.tv_giangvien);
+        TextView tv_tinchi = inflater.findViewById(R.id.tv_tinchi);
 
-        String TenHocPhan = list_hocphan.get(i).getTenHocPhan();
-        String LichHoc = list_hocphan.get(i).getLichHoc();
-        String TuanHoc = list_hocphan.get(i).getTuanHoc();
+        HocPhan HP = list_hocphan.get(i);
 
-        tv_tenhocphan.setText(TenHocPhan);
-        tv_lichhoc.setText(LichHoc);
-        tv_tuanhoc.setText(TuanHoc);
-
+        tv_tenhocphan.setText(HP.getTenHocPhan());
+        tv_lichhoc.setText(HP.getLichHoc().replace(";", "\nThứ ").replace(",", ", "));
+        tv_tuanhoc.setText(HP.getTuanHoc());
+        tv_giangvien.setText(HP.getGiangVien());
+        tv_tinchi.setText(HP.getTinChi());
         return inflater;
     }
 }

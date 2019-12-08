@@ -1,4 +1,4 @@
-package com.duong.pushnotification;
+package com.duong.pushnotification.Adapters;
 
 import android.content.Context;
 import android.os.Build;
@@ -10,28 +10,30 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.duong.pushnotification.classes.ThongBao;
+import com.duong.pushnotification.R;
+
 import java.util.ArrayList;
 
 public class ThongBaoAdapter extends BaseAdapter {
     Context context;
     int layout;
-    ArrayList<Notification> listNotification;
+    ArrayList<ThongBao> listThongBao;
 
-
-    public ThongBaoAdapter(Context context, int layout, ArrayList<Notification> listNotification){
+    public ThongBaoAdapter(Context context, int layout, ArrayList<ThongBao> listThongBao) {
         this.context = context;
-        this.layout=layout;
-        this.listNotification = listNotification;
+        this.layout = layout;
+        this.listThongBao = listThongBao;
     }
 
     @Override
     public int getCount() {
-        return listNotification.size();
+        return listThongBao.size();
     }
 
     @Override
     public Object getItem(int i) {
-        return listNotification.get(i);
+        return listThongBao.get(i);
     }
 
     @Override
@@ -43,29 +45,27 @@ public class ThongBaoAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
 
-        View inflater = layoutInflater.inflate(layout,null,false);
+        View inflater = layoutInflater.inflate(layout, null, false);
         TextView tv_tieude = inflater.findViewById(R.id.tv_tieude);
         TextView tv_noidung = inflater.findViewById(R.id.tv_noidungtb);
-        LinearLayout ln_thongbao =inflater.findViewById(R.id.ln_thongbao);
+        LinearLayout ln_thongbao = inflater.findViewById(R.id.ln_thongbao);
 
+        String TieuDe = listThongBao.get(i).getTieuDe();
+        String NoiDung = listThongBao.get(i).getNoiDung();
+        Boolean DaXem = listThongBao.get(i).getDaXem();
 
-        String title = listNotification.get(i).title;
-        String content = listNotification.get(i).content;
-        Boolean hasSeen = listNotification.get(i).hasSeen;
-
-        if (hasSeen) {
+        if (DaXem) {
             ln_thongbao.setBackground(inflater.getResources().getDrawable(R.drawable.layout_bg_daxem));
-        }else {
+        } else {
             ln_thongbao.setBackground(inflater.getResources().getDrawable(R.drawable.layout_bg_chuaxem));
         }
 
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            tv_tieude.setText(Html.fromHtml(title, Html.FROM_HTML_MODE_COMPACT));
-            tv_noidung.setText(Html.fromHtml(content, Html.FROM_HTML_MODE_COMPACT));
+            tv_tieude.setText(Html.fromHtml(TieuDe, Html.FROM_HTML_MODE_COMPACT));
+            tv_noidung.setText(Html.fromHtml(NoiDung, Html.FROM_HTML_MODE_COMPACT));
         } else {
-            tv_tieude.setText(Html.fromHtml(title));
-            tv_noidung.setText(Html.fromHtml(content));
+            tv_tieude.setText(Html.fromHtml(TieuDe));
+            tv_noidung.setText(Html.fromHtml(NoiDung));
         }
 
         return inflater;

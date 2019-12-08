@@ -38,5 +38,6 @@
 
     <!--colros for card-->
     <color name="whiteCardColor">#fff</color>
+    <color name="MauTim">#3F51B5</color>
 
 </resources>

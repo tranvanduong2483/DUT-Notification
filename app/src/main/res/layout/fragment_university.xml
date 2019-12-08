@@ -6,33 +6,30 @@
     android:orientation="vertical">
 
     <ListView
-        android:visibility="gone"
         android:id="@+id/lv_TBdaotao"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+        android:layout_height="match_parent" />
 
     <RelativeLayout
         android:id="@+id/rl_tb_thongbaochung"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
         <ProgressBar
-            android:layout_centerInParent="true"
             android:id="@+id/pg_tb_thongbaochung"
-            android:indeterminateTint="#000000"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
         <TextView
-            android:layout_marginTop="40dp"
-            android:layout_below="@id/pg_tb_thongbaochung"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:text="Chưa có thông báo"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pg_tb_thongbaochung"
+            android:layout_marginTop="40dp"
+            android:text="Chưa có thông báo"
+            android:textColor="#000000"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 </RelativeLayout>

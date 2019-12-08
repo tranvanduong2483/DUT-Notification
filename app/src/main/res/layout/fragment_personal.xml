@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.duong.pushnotification.MainActivity">
+    tools:context=".Fragment.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,7 +12,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -23,23 +22,21 @@
                 android:background="@color/background"
                 android:paddingBottom="20dp">
 
-
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
 
                     android:paddingTop="50dp"
-                    android:paddingBottom="20dp"
-
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:paddingBottom="20dp">
 
                     <RelativeLayout
-                        android:layout_gravity="center_vertical"
                         android:id="@+id/imgUser"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
+                        android:layout_gravity="center_vertical"
                         android:background="@drawable/circle_border">
 
                         <ImageView
@@ -51,22 +48,20 @@
                             android:padding="3dp"
                             android:scaleType="centerInside"
                             android:src="@drawable/ic_user" />
-
-
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_marginLeft="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_gravity="center">
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp">
 
                         <TextView
-                            android:layout_marginTop="10dp"
-                            android:layout_alignParentTop="true"
-                            android:id="@+id/tv_name"
+                            android:id="@+id/tv_ten"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="10dp"
                             android:fontFamily="sans-serif-light"
                             android:text="Trần Văn Dương"
                             android:textAllCaps="true"
@@ -74,11 +69,11 @@
                             android:textSize="26sp" />
 
                         <TextView
-                            android:layout_marginTop="8dp"
-                            android:layout_below="@id/tv_name"
                             android:id="@+id/tv_address"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_ten"
+                            android:layout_marginTop="8dp"
                             android:fontFamily="sans-serif"
                             android:text="Đại học Bách Khoa - Đại học Đà Nẵng"
                             android:textAllCaps="true"
@@ -86,25 +81,22 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:layout_marginTop="8dp"
-                            android:layout_below="@id/tv_address"
-                            android:id="@+id/tv_Khoa"
+                            android:id="@+id/tv_khoa"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_address"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="10dp"
                             android:fontFamily="sans-serif"
                             android:text="Công nghệ thông tin"
                             android:textAllCaps="true"
-                            android:layout_marginBottom="10dp"
                             android:textColor="@color/white"
                             android:textSize="14sp" />
-
-
                     </RelativeLayout>
                 </LinearLayout>
 
-
                 <ImageView
-                    android:id="@+id/imglogout"
+                    android:id="@+id/imv_thoat"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentRight="true"
@@ -149,7 +141,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_sotinchi"
+                            android:id="@+id/tv_tinchi"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
@@ -187,7 +179,7 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tv_diemtichluy"
+                            android:id="@+id/tv_t4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
@@ -215,8 +207,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/linlay1">
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -225,9 +215,6 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="30dp"
                     android:orientation="vertical">
-
-
-
 
 
                     <LinearLayout
@@ -244,7 +231,7 @@
                             android:textSize="13sp" />
 
                         <TextView
-                            android:id="@+id/tv_Mssv"
+                            android:id="@+id/tv_mssv"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
@@ -274,7 +261,7 @@
                             android:textSize="13sp" />
 
                         <TextView
-                            android:id="@+id/tv_Lop"
+                            android:id="@+id/tv_lop"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
@@ -305,7 +292,7 @@
                             android:textSize="13sp" />
 
                         <TextView
-                            android:id="@+id/tv_Email"
+                            android:id="@+id/tv_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-light"
@@ -320,14 +307,8 @@
                             android:background="@color/grey" />
 
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
-
 </RelativeLayout>

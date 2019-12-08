@@ -4,46 +4,46 @@
     android:layout_height="match_parent">
 
     <ScrollView
-        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:scrollbars="none">
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <RelativeLayout
+                android:id="@+id/rl_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-
                 android:layout_marginBottom="30dp"
-        android:scrollbars = "vertical"
-        android:id="@+id/rl_container"
-        android:padding="10dp"
-        android:background="@drawable/layout_bg_daxem"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    <TextView
-        android:textColor="#ff0000"
-        android:textSize="20sp"
-        android:id="@+id/tv_tieude"
-        android:text="30/09/2019:  Tạm dừng hoạt động tại các khu vực dịch vụ"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                android:background="@drawable/layout_bg_daxem"
+                android:padding="10dp"
+                android:scrollbars="vertical">
 
-    <TextView
-        android:layout_below="@+id/tv_tieude"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:id="@+id/tv_noidung"
-        android:layout_centerVertical="true"
-        android:text="Theo quy định của Nhà nước, Nhà trường tổ chức sắp xếp lại các khu vực dịch vụ của Trường. Do đó, các quầy dịch vụ thuộc khuôn viên Trường sẽ đóng cửa kể từ ngày 01/10/2019. Trong thời gian Trường thực hiện thủ tục để được tiếp tục hoạt động, Nhà trường mong sinh viên cảm thông với các bất tiện gặp phải.
-        \nChi tiết Thông báo tại đây."
+                <TextView
+                    android:id="@+id/tv_tieude"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ModelNotificationTitle"
+                    android:textColor="#ff0000"
+                    android:textSize="20sp" />
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tv_noidung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tieude"
+                    android:layout_centerVertical="true"
+                    android:text="@string/ModelNotificationContent"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
-    </RelativeLayout>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

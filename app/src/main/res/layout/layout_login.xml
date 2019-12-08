@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/loginCard"
-    app:cardCornerRadius="@dimen/loginCardRadius"
-    android:elevation="5dp"
     android:layout_gravity="center"
     android:layout_marginTop="@dimen/loginViewsMargin"
     android:layout_marginBottom="@dimen/loginViewsMargin"
-    android:background="@color/whiteCardColor">
-
-
+    android:background="@color/whiteCardColor"
+    android:elevation="5dp"
+    app:cardCornerRadius="@dimen/loginCardRadius">
 
     <LinearLayout
         style="@style/linearParent"
@@ -19,75 +16,73 @@
 
         <TextView
             style="@style/headerTextPrimary"
-            android:text="Thông tin đăng nhập"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="@string/tieude_login_frame" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputEmail"
             style="@style/parent"
             android:layout_marginTop="@dimen/loginViewsMargin">
+
             <EditText
-                android:textSize="20sp"
                 android:id="@+id/edt_masv"
                 style="@style/modifiedEditText"
+                android:hint="@string/login_user_hint"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:hint="@string/login_user_hint"/>
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputPassword"
             style="@style/parent"
             android:layout_marginTop="@dimen/loginViewsMargin">
+
             <EditText
-                android:textSize="20sp"
                 android:id="@+id/edt_matkhau"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_password_hint"
+                android:inputType="textPassword"
                 android:maxLines="1"
-                android:inputType="textPassword"/>
+                android:textSize="20sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             style="@style/viewParent"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:onClick="viewForgotPAssword"
+
             android:text="Quên mật khẩu"
             android:textColor="@color/primaryTextColor"
-            android:textSize="@dimen/newsMoreTextSize"
-
-            android:layout_gravity="end"
-            android:onClick="viewForgotPAssword"
-            android:layout_marginTop="10dp"/>
+            android:textSize="@dimen/newsMoreTextSize" />
 
         <Button
-            android:onClick="click_Login"
             android:id="@+id/btn_dangnhap"
             style="@style/loginButton"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/loginViewsMargin"
-            android:textSize="20sp"
-            android:text="Đăng nhập" />
+            android:text="Đăng nhập"
+            android:textSize="20sp" />
 
         <ProgressBar
+            android:id="@+id/pg_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:indeterminateTint="@color/primaryTextColor"
             android:indeterminateTintMode="src_in"
-            android:id="@+id/pg_login"
-            android:visibility="gone"
-            android:layout_gravity="center"
-            android:minHeight="70dip"
             android:minWidth="70dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:minHeight="70dip"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/text"
             style="@style/parent"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="@dimen/loginViewsMargin"
             android:text="@string/login_signup_hint"
-            android:onClick="viewRegisterClicked"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
-
-
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

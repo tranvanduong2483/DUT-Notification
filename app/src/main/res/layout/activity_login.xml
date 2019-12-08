@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     style="@style/loginParent"
+    android:orientation="vertical"
     tools:context="com.duong.pushnotification.LoginActivity">
-    <ScrollView
-        style="@style/parent">
 
-        <RelativeLayout
-            style="@style/parent">
+    <ScrollView style="@style/parent">
 
+        <RelativeLayout style="@style/parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -19,14 +17,14 @@
 
                 <LinearLayout
                     style="@style/parent"
+                    android:layout_weight="3"
                     android:background="@drawable/login_shape_bk"
-                    android:orientation="vertical"
-                    android:layout_weight="3">
+                    android:orientation="vertical">
 
                     <ImageView
                         style="@style/parent"
                         android:background="@drawable/ic_login_bk"
-                        android:contentDescription="login background" />
+                        android:contentDescription="@string/login_background" />
 
                 </LinearLayout>
 
@@ -41,18 +39,17 @@
                 android:layout_marginRight="30dp"
                 android:orientation="vertical">
 
-
                 <TextView
                     style="@style/headerText"
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
-                    android:text="DUT Notification"
+                    android:text="@string/application_name"
                     android:textAllCaps="true" />
 
                 <include layout="@layout/layout_login" />
 
             </LinearLayout>
-                 </RelativeLayout>
+        </RelativeLayout>
 
     </ScrollView>
 
