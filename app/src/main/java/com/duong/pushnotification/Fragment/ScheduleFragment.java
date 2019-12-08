@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import com.duong.pushnotification.R;
 import com.duong.pushnotification.classes.HocPhan;
 import com.duong.pushnotification.classes.SessionManager;
 import com.duong.pushnotification.classes.ToastNew;
+import com.duong.pushnotification.classes.TuanHoc;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,11 +29,13 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class ScheduleFragment extends Fragment {
     static String title ="Lịch học";
     private ArrayList<HocPhan> list_hocphan;
-    private  ListView mLv_LichHoc;
+    private ListView mLv_LichHoc;
+    private TextView mTv_TuanHienTai;
     private RelativeLayout relativeLayoutProgress;
     private SessionManager sessionManager;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -89,6 +93,33 @@ public class ScheduleFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+
+
+        mData.child("TuanHoc").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                ArrayList<TuanHoc> list_tuanhoc = new ArrayList<>();
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    TuanHoc tuanHoc =postSnapshot.getValue(TuanHoc.class);
+                    list_tuanhoc.add(tuanHoc);
+                }
+
+                if (list_tuanhoc.size()==0){
+                    return;
+                }
+
+                int tuanhochientai = TuanHoc.getTuanHocHienTai(list_tuanhoc);
+
+                mTv_TuanHienTai.setText(tuanhochientai +"");
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
     }
 
     private void Init(View view) {
@@ -96,6 +127,7 @@ public class ScheduleFragment extends Fragment {
         lichHocAdapter = new LichHocAdapter(view.getContext(), R.layout.row_hocphan_listview, list_hocphan);
         sessionManager =new SessionManager(view.getContext());
         mLv_LichHoc = view.findViewById(R.id.lv_lichhoc);
+        mTv_TuanHienTai = view.findViewById(R.id.tv_tuanhientai);
         relativeLayoutProgress = view.findViewById(R.id.rl_tb_lichhoc);
         mLv_LichHoc.setAdapter(lichHocAdapter);
     }
