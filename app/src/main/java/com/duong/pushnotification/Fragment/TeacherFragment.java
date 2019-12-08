@@ -16,6 +16,7 @@ import com.duong.pushnotification.classes.ThongBao;
 import com.duong.pushnotification.R;
 import com.duong.pushnotification.classes.SessionManager;
 import com.duong.pushnotification.Adapters.ThongBaoAdapter;
+import com.duong.pushnotification.classes.ToolSupport;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -76,7 +77,9 @@ public class TeacherFragment extends Fragment {
                         Collections.sort(list_thongbao, new Comparator<ThongBao>() {
                             @Override
                             public int compare(ThongBao thongBao1, ThongBao thongBao2) {
-                                return 0;
+                                int a = ToolSupport.getNumber(thongBao1.getTieuDe());
+                                int b = ToolSupport.getNumber(thongBao2.getTieuDe());
+                                return b-a;
                             }
                         });
 

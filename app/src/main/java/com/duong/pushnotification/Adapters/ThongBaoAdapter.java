@@ -61,11 +61,11 @@ public class ThongBaoAdapter extends BaseAdapter {
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            tv_tieude.setText(Html.fromHtml(TieuDe, Html.FROM_HTML_MODE_COMPACT));
-            tv_noidung.setText(Html.fromHtml(NoiDung, Html.FROM_HTML_MODE_COMPACT));
+            tv_tieude.setText(Html.fromHtml(TieuDe+"", Html.FROM_HTML_MODE_COMPACT));
+            tv_noidung.setText(Html.fromHtml(NoiDung+"", Html.FROM_HTML_MODE_COMPACT));
         } else {
-            tv_tieude.setText(Html.fromHtml(TieuDe));
-            tv_noidung.setText(Html.fromHtml(NoiDung));
+            tv_tieude.setText(Html.fromHtml(TieuDe+""));
+            tv_noidung.setText(Html.fromHtml(NoiDung+""));
         }
 
         return inflater;
