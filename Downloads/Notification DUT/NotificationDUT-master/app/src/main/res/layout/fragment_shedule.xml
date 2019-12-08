@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundSchedule"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigoColor"
+        android:gravity="center"
+        android:padding="20dp"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/sloganApp"
+            android:layout_weight="1"
+            android:text="@string/gioithieu_lichhoc" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:src="@drawable/logo_dut" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_tuanhoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/weekDetail"
+                android:text="@string/tieude_tuanhoc" />
+
+            <TextView
+                style="@style/weekDetail"
+                android:text="16" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_lichhoc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_tuanhoc"
+            android:background="@color/backgroundSchedule" />
+
+        <RelativeLayout
+            android:id="@+id/rl_tb_lichhoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ProgressBar
+                android:id="@+id/pg_tb_lichhoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                style="@style/detailScheduleText"
+                android:layout_below="@id/pg_tb_lichhoc"
+                android:text="@string/title_loading_sheldule" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "666713600362",
+    "firebase_url": "https://push-notification-ff5b1.firebaseio.com",
+    "project_id": "push-notification-ff5b1",
+    "storage_bucket": "push-notification-ff5b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666713600362:android:2239cc11d7990dac1ab513",
+        "android_client_info": {
+          "package_name": "com.duong.pushnotification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666713600362-2k69h0oh8ffqh7t7e9nnknhdlcmorn3q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.duong.pushnotification",
+            "certificate_hash": "f825f73ac8f167a8c569fef46cc108a4d4e208c4"
+          }
+        },
+        {
+          "client_id": "666713600362-8c2pcte4as3c1erp7i1efm3k8fa8tfu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG3kipoX1zLXSW8vXFXcDqSk9fDlc1NNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666713600362-8c2pcte4as3c1erp7i1efm3k8fa8tfu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

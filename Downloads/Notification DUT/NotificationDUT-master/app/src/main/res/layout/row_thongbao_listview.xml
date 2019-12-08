@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ln_thongbao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/layout_bg_daxem"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_tieude"
+            style="@style/headerNotificationTextStyle"
+            android:ellipsize="end"
+            android:text="@string/ModelNotificationTitle" />
+
+        <TextView
+            android:id="@+id/tv_noidungtb"
+            style="@style/detailNotificationTextStyle"
+            android:ellipsize="end"
+            android:text="@string/ModelNotificationContent" />
+    </LinearLayout>
+
+</LinearLayout>
