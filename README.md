@@ -20,7 +20,7 @@
 
 3.1 Sơ đồ hoạt động
 
-    https://scontent.fhan7-1.fna.fbcdn.net/v/t1.0-9/79249965_1216056015247101_7933552869209276416_o.jpg?_nc_cat=111&_nc_ohc=amftnehnfKwAQkIHRFZ4YmrVBalAc0NHMMRQs3wRXBIG0B-1Bs0Y_5kxQ&_nc_ht=scontent.fhan7-1.fna&oh=624ff3a467ceb66167e5bfaaa86c1864&oe=5E8B1757
+    ![alt text](https://scontent.fhan7-1.fna.fbcdn.net/v/t1.0-9/79249965_1216056015247101_7933552869209276416_o.jpg?_nc_cat=111&_nc_ohc=amftnehnfKwAQkIHRFZ4YmrVBalAc0NHMMRQs3wRXBIG0B-1Bs0Y_5kxQ&_nc_ht=scontent.fhan7-1.fna&oh=624ff3a467ceb66167e5bfaaa86c1864&oe=5E8B1757)
 
 3.2 Firebase Database Realtime:
 
