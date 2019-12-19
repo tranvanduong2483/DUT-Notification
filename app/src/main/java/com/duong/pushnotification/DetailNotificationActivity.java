@@ -30,7 +30,7 @@ public class DetailNotificationActivity extends AppCompatActivity {
         ThongBao tb = (ThongBao) getIntent().getSerializableExtra("ThongBao");
         if (tb != null) {
             HienThiThongBao(tb);
-            LuuTrangThaiDaXem(tb);
+           LuuTrangThaiDaXem(tb);
         }
     }
 

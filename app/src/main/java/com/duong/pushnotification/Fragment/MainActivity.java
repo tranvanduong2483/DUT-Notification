@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import com.duong.pushnotification.R;
 import com.duong.pushnotification.classes.SessionManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.FirebaseApp;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setEvent();
         mSessionManager.checkLogin();
         mBottomNav.setSelectedItemId(R.id.nav_person);
+
     }
 
     private void Init() {

@@ -21,6 +21,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public MyFirebaseMessagingService() {
     }
 
+
+
+
+
+
     @Override
     public void onNewToken(String token) {
         getSharedPreferences("_", MODE_PRIVATE).edit().putString("fb", token).apply();
@@ -33,8 +38,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        Log.d("FCM","Có nhận thông báo");
         setPushNotification(remoteMessage.getData());
     }
+
+
 
     private void setPushNotification(Map data) {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
@@ -56,7 +64,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         Notification notification = new NotificationCompat.Builder(this, Channel)
                 .setSmallIcon(R.drawable.ic_event_note_black_24dp)
-                .setContentTitle(from)
+                .setColor(getResources().getColor(R.color.colorPrimary))
+                .setContentTitle(from +"")
                 .setContentText((Build.VERSION.SDK_INT >= Build.VERSION_CODES.N
                         ? Html.fromHtml(TB.getTieuDe(), Html.FROM_HTML_MODE_COMPACT)
                         : Html.fromHtml(TB.getTieuDe())) + "")
@@ -67,5 +76,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .build();
 
         notificationManager.notify(TB.getTieuDe(), 1, notification);
+
+        Log.d("FCM","End");
+
     }
+
+
+
 }
