@@ -25,6 +25,7 @@ public class SessionManager {
     private static final String EMAIL = "EMAIL";
     private static final String TONGTC = "TONGTINCHI";
     private static final String TICHLUY = "TICHLUY";
+    private static final String LINKAVATAR = "LINKAVATAR";
 
 
     @SuppressLint("CommitPrefEdits")
@@ -43,6 +44,7 @@ public class SessionManager {
         editor.putString(EMAIL, sv.getEmail());
         editor.putString(TONGTC, sv.getTC());
         editor.putString(TICHLUY, sv.getT4());
+        editor.putString(LINKAVATAR, sv.getLinkAvatar());
         editor.apply();
     }
 
@@ -69,6 +71,7 @@ public class SessionManager {
         sv.setEmail(sharedPreferences.getString(EMAIL, null));
         sv.setTC(sharedPreferences.getString(TONGTC, null));
         sv.setT4(sharedPreferences.getString(TICHLUY, null));
+        sv.setLinkAvatar(sharedPreferences.getString(LINKAVATAR, null));
         return sv;
     }
 
@@ -76,6 +79,12 @@ public class SessionManager {
     public String getMSSV() {
         return sharedPreferences.getString(MSSV, null);
     }
+
+    public String getLinkAvatar() {
+        return sharedPreferences.getString(LINKAVATAR, null);
+    }
+
+
 
     public void logout() {
         String MSSV = getMSSV();

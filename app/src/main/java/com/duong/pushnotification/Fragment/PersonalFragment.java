@@ -16,12 +16,15 @@ import androidx.fragment.app.Fragment;
 
 import com.duong.pushnotification.MyFirebaseMessagingService;
 import com.duong.pushnotification.R;
-import com.duong.pushnotification.classes.SessionManager;
 import com.duong.pushnotification.classes.ConnectThread;
+import com.duong.pushnotification.classes.SessionManager;
 import com.duong.pushnotification.classes.SinhVien;
 import com.duong.pushnotification.classes.ToastNew;
 import com.github.nkzawa.emitter.Emitter;
 import com.github.nkzawa.socketio.client.Socket;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonalFragment extends Fragment {
     static String title = "Cá nhân";
@@ -29,6 +32,7 @@ public class PersonalFragment extends Fragment {
     private SessionManager sessionManager;
     private TextView mTv_Ten, mTv_MSSV, mTv_Lop, mTv_Khoa, mTv_Email, mTv_TinChi, mTv_T4;
     private ImageView mImv_Thoat;
+    private CircleImageView iv_avatar;
     private ProgressBar mPg_logout;
 
     @Nullable
@@ -39,12 +43,14 @@ public class PersonalFragment extends Fragment {
         Init(view);
         ShowThongTinSinhVien();
         setEvent();
-
         return view;
     }
 
+
+
     private void Init(View view) {
         sessionManager = new SessionManager(view.getContext());
+        iv_avatar = view.findViewById(R.id.iv_avatar);
         mTv_Ten = view.findViewById(R.id.tv_ten);
         mTv_MSSV = view.findViewById(R.id.tv_mssv);
         mTv_Lop = view.findViewById(R.id.tv_lop);
@@ -65,6 +71,7 @@ public class PersonalFragment extends Fragment {
         mTv_MSSV.setText(sv.getMaSinhVien());
         mTv_TinChi.setText(sv.getTC());
         mTv_T4.setText(sv.getT4());
+        loadAnhFromURL(sv.getLinkAvatar());
     }
 
     private void setEvent() {
@@ -86,6 +93,8 @@ public class PersonalFragment extends Fragment {
                 mPg_logout.setVisibility(ProgressBar.VISIBLE);
             }
         });
+
+        mSocket.on("server-send-image-url",callback_avatar);
     }
 
     private Emitter.Listener callback_logout = new Emitter.Listener() {
@@ -111,4 +120,37 @@ public class PersonalFragment extends Fragment {
             });
         }
     };
+
+
+
+    private Emitter.Listener callback_avatar = new Emitter.Listener() {
+        @Override
+        public void call(final Object... args) {
+            final Activity activity = getActivity();
+            if (activity == null) return;
+
+            activity.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        loadAnhFromURL(args[0] + "");
+                        SinhVien sv = sessionManager.getSinhVien();
+                        sv.setLinkAvatar(args[0] +"");
+                        sessionManager.createSession(sv);
+                    } catch (Exception e) { }
+                }
+            });
+        }
+    };
+
+    private void loadAnhFromURL(String URL) {
+
+        if (URL==null || URL.isEmpty()) return;
+
+        Picasso.with(getActivity())
+                .load(URL)
+                .placeholder(R.drawable.no_avatar)
+                .error(R.drawable.no_avatar)
+                .into(iv_avatar);
+    }
 }

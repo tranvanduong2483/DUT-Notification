@@ -9,6 +9,10 @@ public class SinhVien {
     private String TC;
     private String T4;
 
+
+    private String LinkAvatar;
+
+
     public SinhVien(String maSinhVien, String ten, String khoa, String lop, String email, String TC, String t4) {
         MaSinhVien = maSinhVien;
         Ten = ten;
@@ -21,6 +25,15 @@ public class SinhVien {
 
     public SinhVien() {
     }
+
+    public String getLinkAvatar() {
+        return LinkAvatar;
+    }
+
+    public void setLinkAvatar(String linkAvatar) {
+        LinkAvatar = linkAvatar;
+    }
+
 
     public String getMaSinhVien() {
         return MaSinhVien;
