@@ -1,7 +1,10 @@
 # NotificationDUT
 
 
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/Screen%20Shot%202020-02-26%20at%2016.37.30.png?v=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png?v=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png?v=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png?v=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png?v=100)
 
 
 
