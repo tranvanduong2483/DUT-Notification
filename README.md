@@ -1,10 +1,10 @@
 # NotificationDUT
 
 
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png?v=100)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png?v=100)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png?v=100)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png?v=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png?s=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png?s=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png?s=100)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png?s=100)
 
 
 
