@@ -1,14 +1,14 @@
 # NotificationDUT
 
 
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png?s=50)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png?s=100)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png?s=100)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png?s=50)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png)
 
 
 
-1. Lý do chọn đề tài:
+1. Vấn đề?
 
     HỆ THỐNG THÔNG TIN SINH VIÊN - TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐẠI HỌC ĐÀ NẴNG”
 
@@ -28,7 +28,7 @@
 
 3.1 Sơ đồ hoạt động
 
-    ![alt text](https://scontent.fhan7-1.fna.fbcdn.net/v/t1.0-9/79249965_1216056015247101_7933552869209276416_o.jpg?_nc_cat=111&_nc_ohc=amftnehnfKwAQkIHRFZ4YmrVBalAc0NHMMRQs3wRXBIG0B-1Bs0Y_5kxQ&_nc_ht=scontent.fhan7-1.fna&oh=624ff3a467ceb66167e5bfaaa86c1864&oe=5E8B1757)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/5.png?s=50)
 
 3.2 Firebase Database Realtime:
 
