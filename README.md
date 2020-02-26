@@ -30,9 +30,29 @@
 
 ![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/5.png?s=50)
 
+(1) Client gửi thông tin đăng nhập và token lên server
+(2) Server tiến hành lấy thông tin đăng nhập để lấy được thông tin sinh viên về thông tin cá nhân và học phần của sinh viên này
+(3.1) Lưu thông tin cá nhân, và học phần về cơ sở dữ liệu MySQL
+(3.2) Lưu học phần vào Firebase Realtime Database
+(3.3) Phản hồi kết quả đăng nhập
+
+- Quá trình server xử lý thông báo:
+(4) Sau mỗi 30 phút, server tiến hành lấy dữ liệu thông báo từ trang sv.dut.udn.vn
+(5.1), (5.2) Dựa vào dữ liệu thông báo và dữ liệu sinh viên, tiến hành phân tích thông báo đến từng sinh viên
+(6.1) Lưu dữ liệu thông báo vào Firebase Realtime Database để client truy cập
+(6.2) Gửi thông báo và token lên Firebase Cloud Messaging
+(7) Firebase Cloud Messaging có nhiệm vụ phân phát thông báo đến clien dựa vào token
+
+- Quá trình server xử lý dữ liệu về tuần học:
+(8) Sau mỗi 30 phút, server tiến hành lấy dữ liệu tuần học từ trang dut.udn.vn/lichtuan21
+(9) Lưu dữ liệu tuần học về Firebase Realtime Database
+
+- Quá trình client xem thông báo, lịch tuần và học phần:
+(10) Client lấy dữ liệu thông báo, lịch tuần và học phần dựa vào nút “Mã Sinh Viên“
+
 3.2 Firebase Database Realtime:
 
-    https://lh3.googleusercontent.com/BzgOX5UZYhgPKB-5mjlBKudEs2C_QH7nBFKNNyxWcYfHthppRpIsPWPXfOa6ToHLkGlTOCgBIGTxuJkurZkWwAXY7ZCXlsUb1pXvfRtQ70dTH21VU8vYywSgHa6A4HMdtRfyQKNXQnAn5ywMwZeq4D4K1XzO0Q8MvrxRJX_ysAz6ZmMyWxRV5Tb4QMxmdkU_SLh7dy4HlORo2z-Vv4bXivSzqThT53lzgGo9eHubxtK9rPp1WHmxXD05uPiWtVrCnsuBkF8HRcGAn653zDKpuCDYJ8zN4V5JN2s-6EoEd9UA9EsRZreFp4e-j1SwLJbLcodZWIl2PIa-5CSWiYn_rwFQoKYCR56k6yJNagOlqgx8PsxLqdxE491NB5-glsB5LatYbewZVW-_NQ35Z2ntxFOQd_oS3MQX2QZQd3IQSuRpdLEiXC2dGCCxd-JA0hYhZCcRSzWVwtjsF9VTEdtwyt_BXS42tdGXjHTlpktI0ts0vPWgqAaVnZ7NRgRiTPKIJMOmN_rjanR5YSNnCDVrFdz-4w0UGxU3MoRkYZUSECBDp04e5F71SC-mzEe-yGUB35Q-JliD9SeVnfRx-RFZpI6PqaHDCmbsv5bQYGGKfaGIye1LjFwqG9k1Q0_j6BkeHkavUbIBdyM0DCoI7RpEWnBTvFzC5RNEZYDsVF0FyyKcUhHnb4kgQiRm=w1814-h1780-no
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/6.png)
 
 4. Link phân bổ nhiệm vụ:
 
@@ -44,14 +64,7 @@
 
     https://youtu.be/IvCQnJ6cVoQ
 
-6. Dự án được chia sẽ:
-
-    Ứng dụng này là một phần của đồ án Lập trình mạng:
-    Bản báo cáo: https://docs.google.com/document/d/*****/edit#heading=h.y1979wmu71wj
-
-7. Mã nguồn: 
-
-    Client (Android): https://github.com/tranvanduong2483/NotificationDUT
+6. Mã nguồn server:
 
     Server (Nodejs): https://github.com/tranvanduong2483/server-dut-notification
 
