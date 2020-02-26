@@ -1,10 +1,8 @@
 # NotificationDUT
 
 
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png)
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/1.png)![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/2.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/3.png)![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png)
 
 
 #### 1. Vấn đề?
