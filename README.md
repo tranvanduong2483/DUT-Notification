@@ -1,7 +1,7 @@
 # NotificationDUT
 
 
-![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/Screen%20Shot%202020-02-26%20at%2016.37.30.png)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/Screen%20Shot%202020-02-26%20at%2016.37.30.png | width=100)
 
 
 
