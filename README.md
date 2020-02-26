@@ -7,7 +7,6 @@
 ![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/4.png)
 
 
-
 1. Vấn đề?
 
     HỆ THỐNG THÔNG TIN SINH VIÊN - TRƯỜNG ĐẠI HỌC BÁCH KHOA - ĐẠI HỌC ĐÀ NẴNG”
@@ -26,7 +25,7 @@
     - Nhận thông báo qua email hoặc thông báo ngay trên ứng dụng
     - Xem lịch học offline
 
-3.1 Sơ đồ hoạt động
+3. Sơ đồ hoạt động
 
 ![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/5.png?s=50)
 
@@ -51,17 +50,17 @@
     - Quá trình client xem thông báo, lịch tuần và học phần:
         (10) Client lấy dữ liệu thông báo, lịch tuần và học phần dựa vào nút “Mã Sinh Viên“
 
-3.2 Firebase Database Realtime:
+4. Firebase Database Realtime:
 
 ![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/6.png)
 
-4. Demo ứng dụng:
+5. Demo ứng dụng:
 
     https://www.youtube.com/watch?v=vbTvzUCPBqM
 
     https://youtu.be/IvCQnJ6cVoQ
 
-5. Mã nguồn server:
+6. Mã nguồn server:
 
     Server (Nodejs): https://github.com/tranvanduong2483/server-dut-notification
 
