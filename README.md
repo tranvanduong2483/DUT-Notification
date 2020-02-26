@@ -1,7 +1,7 @@
 # NotificationDUT
 
 
-![Image description](https://znews-photo.zadn.vn/w1024/Uploaded/qhj_yvobvhfwbv/2018_07_18/Nguyen_Huy_Binh1.jpg)
+![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/Screen%20Shot%202020-02-26%20at%2016.37.30.png)
 
 
 
