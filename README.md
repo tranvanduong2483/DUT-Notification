@@ -54,17 +54,13 @@
 
 ![Image description](https://github.com/tranvanduong2483/NotificationDUT/blob/master/image/6.png)
 
-4. Link phân bổ nhiệm vụ:
-
-    https://docs.google.com/spreadsheets/d/10mbjg_QRdjWZ8HSLeU-ePyI4BCgqYgXwHZRAMk11ETQ
-
-5. Link demo ứng dụng:
+4. Demo ứng dụng:
 
     https://www.youtube.com/watch?v=vbTvzUCPBqM
 
     https://youtu.be/IvCQnJ6cVoQ
 
-6. Mã nguồn server:
+5. Mã nguồn server:
 
     Server (Nodejs): https://github.com/tranvanduong2483/server-dut-notification
 
